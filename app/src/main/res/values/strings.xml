@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Guess My Number</string>
+    <string name="screen_top_text">Questions</string>
+    <string name="reset_button">Reset</string>
+    <string name="success_text">Success</string>
+</resources>
