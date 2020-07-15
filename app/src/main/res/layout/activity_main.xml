@@ -7,9 +7,12 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/questions_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:text="@string/screen_top_text"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
@@ -32,9 +35,11 @@
         />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/guessed_number_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Our Nubmer"
+        android:visibility="invisible"
         android:layout_margin="8dp"
         android:layout_centerHorizontal="true"
         android:textSize="24sp"
@@ -55,6 +60,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/downward_arrow"
             android:layout_weight="2"
+            android:onClick="downArrow"
         />
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -62,6 +68,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/success"
             android:layout_weight="2"
+            android:onClick="successFunction"
             />
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -69,6 +76,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/upward_arrow"
             android:layout_weight="2"
+            android:onClick="upArrow"
             />
 
 
@@ -84,6 +92,7 @@
         android:layout_alignParentBottom="true"
         android:background="#71DBD6"
         android:layout_margin="8dp"
+        android:onClick="reset"
         />
 
 
