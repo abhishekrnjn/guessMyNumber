@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         var question : TextView? = findViewById(R.id.questions_textview)
+        question?.text = resources.getString(R.string.number_five)
         num =5
     }
 
