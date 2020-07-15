@@ -10,18 +10,18 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     var num: Int =0
+    var question : TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        var question : TextView? = findViewById(R.id.questions_textview)
+        question = findViewById(R.id.questions_textview)
         question?.text = resources.getString(R.string.number_five)
         num =5
     }
 
 
     fun downArrow(view: View){
-        var question : TextView? = findViewById(R.id.questions_textview)
         if(num == 5){
             question?.text = resources.getString(R.string.number_three)
             num =3
@@ -41,7 +41,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun upArrow(view: View){
-        var question : TextView? = findViewById(R.id.questions_textview)
         if(num ==5){
             question?.text = resources.getString(R.string.number_seven)
             num = 7
@@ -74,7 +73,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun reset(view: View){
-        var question : TextView? = findViewById(R.id.questions_textview)
         questions_textview.visibility = View.VISIBLE
         success_text_view.visibility = View.INVISIBLE
         guessed_number_text.visibility = View.INVISIBLE
